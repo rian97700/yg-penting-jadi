@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>flowers</title>
+</head>
+<body class="container">
+    <div class="night"></div>
+    <div class="flowers">
+      <!-- Content of flowers here -->
+    </div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+      <audio id="background-audio" src="tiktokio.com_bv757aM4eEqkT12y1IzK.mp3"></audio>
+      <button id="play-button">Play Music</button>
+    </div>
+    
+    <script src="main.js"></script>
+    <script>
+      document.getElementById('play-button').addEventListener('click', function() {
+        const audio = document.getElementById('background-audio');
+        if (audio.paused) {
+          audio.play();
+          this.textContent = 'Pause Music';
+        } else {
+          audio.pause();
+          this.textContent = 'Play Music';
+        }
+      });
+    </script>
+</body>
+</html>
